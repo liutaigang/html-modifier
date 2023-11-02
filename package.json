@@ -1,0 +1,25 @@
+{
+  "name": "html-modifier",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/cjs/index.js",
+  "nodule": "./dist/esm2015/index.js",
+  "typings": "./dist/typings/index.d.ts",
+  "scripts": {
+    "build": "pnpm clean && pnpm build:cjs && pnpm build:es2015 && pnpm build:types",
+    "build:cjs": "tsc",
+    "build:es2015": "tsc -p ./tsconfig.esm2015.json",
+    "build:types": "tsc -p ./tsconfig.types.json",
+    "clean": "rimraf ./dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "htmlparser2": "^9.0.0"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.5",
+    "typescript": "^5.2.2"
+  }
+}
