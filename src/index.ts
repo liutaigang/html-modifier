@@ -23,6 +23,7 @@ export type ModifyHandler = {
 
   oncomment?(data: string): {
     data: string;
+    clearComment?: boolean; // 默认为： false
   };
 };
 
@@ -74,10 +75,11 @@ export function modifyHtml(htmlText: string, modifyHandler: ModifyHandler) {
       },
       oncomment(data) {
         if (modifyHandler.oncomment) {
-          const res = modifyHandler.oncomment(data);
-          data = res.data;
+          const { data: content, clearComment } = modifyHandler.oncomment(data);
+          htmlTextCopy += clearComment ? content : `<!--${content}-->`;
+        } else {
+          htmlTextCopy += `<!--${data}-->`;
         }
-        htmlTextCopy += `<!--${data}-->`;
       },
     });
     parser.write(htmlText);
