@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "outDir": "./dist/esm5",
+    "lib": ["ES2018"],
+    "downlevelIteration": true
+  }
+}

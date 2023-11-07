@@ -1,21 +1,21 @@
 {
-    "compilerOptions": {
-      "removeComments": true,
-      "strict": true,
-      "noImplicitAny": true,
-      "strictNullChecks": true,
-      "alwaysStrict": true,
-      "noImplicitThis": true,
-      "noUnusedLocals": true,
-      "noUnusedParameters": true,
-      "noImplicitReturns": true,
-      "allowSyntheticDefaultImports": true,
-      "outDir": "dist",
-      "stripInternal": true,
-      "moduleResolution": "node",
-      "importHelpers": true,
-      "lib": ["es2017"]
-    },
-    "include": ["./src/"],
-    "exclude": ["./src/__test__"]
-  }
+  "compilerOptions": {
+    "removeComments": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "alwaysStrict": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "dist",
+    "stripInternal": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "lib": ["es2018", "DOM"]
+  },
+  "include": ["./src/"],
+  "exclude": ["./src/__test__"]
+}
