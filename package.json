@@ -3,7 +3,7 @@
   "version": "1.2.0",
   "description": "",
   "main": "./dist/cjs/index.js",
-  "nodule": "./dist/esm2015/index.js",
+  "module": "./dist/esm2015/index.js",
   "typings": "./dist/typings/index.d.ts",
   "scripts": {
     "build": "pnpm clean && run-p build:*",
